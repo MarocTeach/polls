@@ -6,6 +6,7 @@ import {
   ColorModeProvider,
   theme,
 } from '@chakra-ui/core'
+import Container from '../components/Container'
 
 class App extends NextApp {
   render() {
@@ -14,7 +15,9 @@ class App extends NextApp {
       <ThemeProvider theme={theme}>
         <CSSReset />
         <ColorModeProvider>
-          <Component {...pageProps} />
+          <Container>
+            <Component {...pageProps} />
+          </Container>
         </ColorModeProvider>
       </ThemeProvider>
     )
